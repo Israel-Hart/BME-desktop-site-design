@@ -1,0 +1,427 @@
+* {
+    padding:0; 
+    margin: 0; 
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: Open sans, sans-serif;
+}
+
+header { 
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    padding: 1.5rem 6rem 1.5rem 3rem; 
+}
+
+.logo img { 
+    width: 80px; 
+    
+}
+
+header a, 
+header li { 
+ list-style: none;
+ text-decoration: none;
+ color: #4a2e0a;
+ font-weight: 600;
+}
+
+header li {
+    padding: 10px 0;
+    cursor: pointer;
+    position: relative;
+}
+
+header li::after { 
+    content: ''; 
+    position: absolute;
+    background: #4a2e0a;
+    left: 0;
+    right: 0;
+    top: 95%;
+    bottom: 0;
+    opacity: 0;
+    transition: .2s ease-in;
+}
+
+header li:hover::after {
+    opacity: 1;
+}
+
+.sticky {
+    width: 40%;
+    max-width: 400px;
+}
+
+header ul {
+    width: 100%;
+    display:block;
+    padding: 1px 10px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+header ul::before { 
+    content: ''; 
+    opacity: 0.8;
+    position: absolute;
+    background: #fff; 
+    width: 100%;
+    height: 100%; 
+    left: 0; 
+    top: 0;
+    z-index: -1;
+}
+
+header li { 
+    font-size: 1.1em;
+}
+
+.showcase {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 0 3rem 0;
+}
+
+.hero { 
+    padding: 6rem 0 0 0;
+    width: 35%;                                        
+}
+
+.hero h1 { 
+    color: #4a2e0a;
+    background: rgba(255,255,255,0.7);  
+    font-size: 7em;
+    padding: 0 0 1rem 0;
+}
+
+.hero h2 { 
+    font-size: 3em;
+    padding: 0 0 0 10rem;
+    color: #fff;
+}
+
+form {
+    background: #fff;
+    margin-top: 4em;  
+    width: 320px; 
+    padding: 1rem 1.6em;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px #999999;
+    border: 0.4px solid #734C1A;
+    /* font-size: 1.2em; */
+    position: relative;
+}
+
+form span { 
+    position: absolute; 
+    width: 20%; 
+    height: 10%; 
+    background: #4a2e0a;
+    top: 0;
+}
+
+form a,
+.typo h1 { 
+    text-decoration: none;
+    color: #4a2e0a;
+    outline: none;
+}
+
+.typo { 
+    width: 100%; 
+    display: flex;
+    justify-content: space-between;
+    padding: 2.4rem 0 1rem 0;
+}
+
+fieldset { 
+    display: flex;
+    width: 100%;
+    flex-direction : column;
+    border: none;
+}
+fieldset label {     
+    display: flex; 
+    justify-content: center;
+    align-items: baseline;
+    position: relative;
+    padding: 1rem 0 0 0; 
+}
+
+fieldset span { 
+    display: block;
+    position: absolute;
+    color: #4a2e0a;
+    bottom: 0;  
+}
+
+fieldset input[type="text"],
+fieldset input[type="password"] { 
+    display: block; 
+    margin: 0 15px;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #734C1A;
+    outline: none;
+}   
+
+.section-header {   
+    font-weight: 400;
+    font-size: 3em;
+    margin: 3.5rem 0 0 0;
+    padding: 2rem 0 1rem 4rem;
+    color: #4a2e0a;
+}
+
+.section-description { 
+    padding: 0 0 1rem 4.5rem;
+}
+
+.services-wrap {
+    display: flex;
+    position: relative;
+    width: 90%;
+    justify-content: center;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem 0;
+    background: none;
+}
+
+.services-wrap div {
+    background:#fff;
+    position: relative; 
+    padding: 20px;
+    width: 30%;
+    min-width: 360px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 7px #aaaaaa;
+}
+
+.services-wrap div::after  {
+    content: '';
+    position: absolute; 
+    background: #aaaaaa; 
+    width: 100%;
+    height: 100%; 
+    top: 0;
+    left: 0;
+    transition: all .3s ease;
+    z-index: -1;
+    border-radius: 10px;
+}
+
+.services-wrap div:hover::after {
+     transform: translate(3%,3%);
+     filter:blur(5px);
+}
+
+.service-header {
+    font-size: 2.5em;   
+    width: 30%;
+    padding: 2rem 0 2rem 2rem;
+}
+
+.service-description { 
+    text-align:jsutify;
+    padding: 0 0 4rem 4rem ;
+    width: 100%;
+    margin: 0 auto; 
+    transition: background .3s ease; 
+}
+
+.services-wrap span { 
+    display: block; 
+    position: absolute;
+    width: 30%; 
+    height: 30%;
+}   
+
+.block {
+    display: block;
+    padding: 10px 0;
+}
+
+.cta { 
+    display:block;
+    width: 50%;
+    padding: 10px;
+    margin: 15px auto;
+    border: none;
+    color: #fff;
+    background: #4a2e0a;
+    cursor: pointer;
+    transition: .3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.cta::after { 
+    content: '';
+    position: absolute;
+    background:#301e06; 
+    opacity: 0;
+    width :105%; 
+    height: 105%; 
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transition: .7s ease;
+}
+
+.cta:hover::after {
+    opacity:1; 
+}
+
+.contact-section,
+.about-section { 
+    padding: 4rem 0;
+}   
+
+.contact-wrap {
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding-top: 5em;
+}
+
+.socials {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 2rem;
+}
+
+.socials div { 
+    display: flex;
+    gap: 10px; 
+    justify-content: space-between;
+    align-items: center;    
+    margin: 10px auto;
+}
+
+.social-circle {
+    display: flex;
+    width: 50px; 
+    height: 50px; 
+    background: #301e06;
+    border-radius: 50%;
+}
+
+.socials a { 
+    color: #000;
+    list-style: none;
+    text-decoration: none;
+}
+
+.message { 
+    width:50%;
+    padding: 0 2rem;
+}
+
+.message p { 
+    font-size: 1.8em;
+    margin: 0 2rem 1.2rem 0;
+}
+
+.message textarea { 
+    width: 80%;
+    height: 60%;
+    background: none;
+    border: 3px solid #301e06;
+    color: #301e06;
+    padding: 1rem;
+    font-size: 1.2em;
+}
+
+.message button { 
+    margin-left: 0;
+}
+
+.about-wrap {
+    padding: 4rem 0; 
+}
+
+.about-text { 
+    width: 40%;
+    margin: 2rem auto;
+    position: relative;
+}
+
+.about-text::after { 
+    content: '"'; 
+    position: absolute; 
+    top: -10%; 
+    left: -25%; 
+    font-size: 8em;
+    font-family: serif;
+    color: #301e06;
+}
+
+.about-text span {
+    display: flex;
+    display: block; 
+    bottom: 0;
+    width:100%; 
+    height:65%; 
+    background: linear-gradient(180deg, rgba(255,255,255,.8) 40%, #fff 60%);
+    position :absolute;
+}
+
+.about-text button { 
+    margin-top: 4rem;
+}
+
+.review-header { 
+    padding:0;
+}
+
+.bg-elems { 
+    position: absolute; 
+    top: 0;
+    left: 20%;
+    z-index: -1000;
+}
+
+.bg-elems,
+.bg-elems div{ 
+    width: 800px;
+    height: auto;
+}
+
+.bg-elems div { 
+    position: relative;
+    width: 100%; 
+    height: 100%;
+}
+
+.bg-elems span {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    background: #fff;
+    opacity: 0.2;
+}
+
+.bg-elems img{ 
+    display: block; 
+    width: 100%;
+    height: 100%; 
+}
